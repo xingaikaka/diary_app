@@ -1,0 +1,30 @@
+name: diary_app
+description: "心记 - A cute cartoon-style daily diary app."
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.5.0
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.8
+  google_fonts: ^8.0.2
+  shared_preferences: ^2.3.3
+  image_picker: ^1.1.2
+  path_provider: ^2.1.4
+  intl: ^0.20.2
+  uuid: ^4.5.1
+  provider: ^6.1.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+  flutter_launcher_icons: ^0.14.3
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/images/
