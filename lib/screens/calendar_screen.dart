@@ -85,7 +85,7 @@ class _CalendarScreenState extends State<CalendarScreen> {
                               children: [
                                 const Icon(Icons.add, color: Colors.white, size: 16),
                                 const SizedBox(width: 4),
-                                Text('写日记',
+                                Text('记一笔',
                                     style: GoogleFonts.nunito(
                                         color: Colors.white,
                                         fontSize: 13,
@@ -109,7 +109,7 @@ class _CalendarScreenState extends State<CalendarScreen> {
                   children: [
                     Icon(Icons.note_outlined, size: 56, color: DiaryTheme.textSecondary.withOpacity(0.4)),
                     const SizedBox(height: 12),
-                    Text('这一天还没有日记',
+                    Text('这一天，还没有故事',
                         style: GoogleFonts.nunito(
                             color: DiaryTheme.textSecondary, fontSize: 15)),
                   ],
@@ -155,9 +155,10 @@ class _CalHeader extends StatelessWidget {
               Text('日历',
                   style: GoogleFonts.nunito(
                       fontSize: 32,
-                      fontWeight: FontWeight.w900,
-                      color: DiaryTheme.textPrimary)),
-              Text('查看每天的日记记录',
+                      fontWeight: FontWeight.w800,
+                      color: DiaryTheme.textPrimary,
+                      letterSpacing: 1)),
+              Text('翻一翻，那些被认真记住的日子',
                   style: GoogleFonts.nunito(
                       fontSize: 14, color: DiaryTheme.textSecondary)),
             ],

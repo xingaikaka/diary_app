@@ -60,13 +60,14 @@ class _TimelineHeader extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text('时间线',
+          Text('时光轴',
               style: GoogleFonts.nunito(
                   fontSize: 32,
-                  fontWeight: FontWeight.w900,
-                  color: DiaryTheme.textPrimary)),
+                  fontWeight: FontWeight.w800,
+                  color: DiaryTheme.textPrimary,
+                  letterSpacing: 1)),
           const SizedBox(height: 4),
-          Text('共 $total 篇日记的故事',
+          Text('一路走来，已收藏 $total 段时光',
               style: GoogleFonts.nunito(
                   fontSize: 14, color: DiaryTheme.textSecondary)),
           const SizedBox(height: 12),
@@ -75,7 +76,7 @@ class _TimelineHeader extends StatelessWidget {
               DiaryTheme.primary,
               DiaryTheme.secondary,
               DiaryTheme.accent,
-              const Color(0xFFBA68C8),
+              const Color(0xFFA194B0),
             ]
                 .map((c) => Expanded(
                       child: Container(
@@ -283,13 +284,13 @@ class _EmptyState extends StatelessWidget {
         children: [
           Icon(Icons.auto_stories_outlined, size: 72, color: DiaryTheme.textSecondary.withOpacity(0.35)),
           const SizedBox(height: 16),
-          Text('还没有日记记录',
+          Text('时光，还是一片空白',
               style: GoogleFonts.nunito(
                   fontSize: 18,
                   fontWeight: FontWeight.w700,
                   color: DiaryTheme.textSecondary)),
           const SizedBox(height: 8),
-          Text('开始写日记，时间线会显示在这里',
+          Text('写下第一行字，便有了回忆的起点',
               style: GoogleFonts.nunito(
                   fontSize: 14, color: DiaryTheme.textSecondary)),
         ],

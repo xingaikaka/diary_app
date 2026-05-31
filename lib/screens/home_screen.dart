@@ -30,7 +30,7 @@ class HomeScreen extends StatelessWidget {
             if (recent.isNotEmpty) ...[
               SliverToBoxAdapter(
                 child:             _SectionTitle(
-                    icon: Icons.auto_stories_rounded, title: '最近的日记', count: recent.length),
+                    icon: Icons.auto_stories_rounded, title: '近来的字句', count: recent.length),
               ),
               SliverPadding(
                 padding:
@@ -96,11 +96,22 @@ class _Header extends StatelessWidget {
                     ),
                     const SizedBox(height: 4),
                     Text(
-                      '心记',
+                      '拾光',
                       style: GoogleFonts.nunito(
                         fontSize: 32,
-                        fontWeight: FontWeight.w900,
+                        fontWeight: FontWeight.w800,
                         color: DiaryTheme.textPrimary,
+                        letterSpacing: 4,
+                      ),
+                    ),
+                    const SizedBox(height: 2),
+                    Text(
+                      '拾起日子里的微光',
+                      style: GoogleFonts.nunito(
+                        fontSize: 12,
+                        color: DiaryTheme.textSecondary,
+                        fontWeight: FontWeight.w500,
+                        letterSpacing: 0.5,
                       ),
                     ),
                   ],
@@ -172,7 +183,7 @@ class _TodaySection extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          _SectionTitle(icon: Icons.wb_sunny_rounded, title: '今天', count: null),
+          _SectionTitle(icon: Icons.wb_sunny_rounded, title: '今日', count: null),
           const SizedBox(height: 6),
           entry == null
               ? _WritePrompt(onTap: onWrite)
@@ -204,15 +215,15 @@ class _WritePrompt extends StatelessWidget {
         padding: const EdgeInsets.all(20),
         decoration: BoxDecoration(
           gradient: const LinearGradient(
-            colors: [Color(0xFFFF7B9C), Color(0xFFFFB3C6)],
+            colors: [Color(0xFF8BA888), Color(0xFFBACBB2)],
             begin: Alignment.topLeft,
             end: Alignment.bottomRight,
           ),
           borderRadius: BorderRadius.circular(20),
           boxShadow: [
             BoxShadow(
-              color: DiaryTheme.primary.withOpacity(0.3),
-              blurRadius: 16,
+              color: DiaryTheme.primary.withOpacity(0.25),
+              blurRadius: 18,
               offset: const Offset(0, 6),
             ),
           ],
@@ -226,18 +237,19 @@ class _WritePrompt extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    '今天还没有写日记哦',
+                    '今天，还是一页空白',
                     style: GoogleFonts.nunito(
                         fontSize: 16,
-                        fontWeight: FontWeight.w800,
-                        color: Colors.white),
+                        fontWeight: FontWeight.w700,
+                        color: Colors.white,
+                        letterSpacing: 0.5),
                   ),
                   const SizedBox(height: 4),
                   Text(
-                    '点击记录今天的心情和故事吧 →',
+                    '轻触，写下此刻的心绪 →',
                     style: GoogleFonts.nunito(
                         fontSize: 13,
-                        color: Colors.white.withOpacity(0.85)),
+                        color: Colors.white.withOpacity(0.9)),
                   ),
                 ],
               ),

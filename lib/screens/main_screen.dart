@@ -68,11 +68,11 @@ class _BottomBar extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
-          Expanded(child: _NavItem(iconData: Icons.home_rounded, label: '主页', selected: index == 0, onTap: () => onTap(0))),
+          Expanded(child: _NavItem(iconData: Icons.home_rounded, label: '今日', selected: index == 0, onTap: () => onTap(0))),
           Expanded(child: _NavItem(iconData: Icons.calendar_month_rounded, label: '日历', selected: index == 2, onTap: () => onTap(2))),
           const SizedBox(width: 56), // FAB 占位
-          Expanded(child: _NavItem(iconData: Icons.timeline_rounded, label: '时间线', selected: index == 1, onTap: () => onTap(1))),
-          Expanded(child: _NavItem(iconData: Icons.star_rounded, label: '收藏', selected: false, onTap: () => onTap(1))),
+          Expanded(child: _NavItem(iconData: Icons.timeline_rounded, label: '时光', selected: index == 1, onTap: () => onTap(1))),
+          Expanded(child: _NavItem(iconData: Icons.star_rounded, label: '珍藏', selected: false, onTap: () => onTap(1))),
         ],
       ),
     );

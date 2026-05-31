@@ -23,7 +23,7 @@ class DiaryApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: '心记',
+      title: '拾光',
       debugShowCheckedModeBanner: false,
       theme: DiaryTheme.theme,
       home: const MainScreen(),

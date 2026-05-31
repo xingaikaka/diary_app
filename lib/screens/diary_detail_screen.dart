@@ -136,7 +136,7 @@ class DiaryDetailScreen extends StatelessWidget {
                   ),
                   if (entry.imagePaths.length > 1) ...[
                     const SizedBox(height: 24),
-                    Text('相册',
+                    Text('那天的画面',
                         style: GoogleFonts.nunito(
                             fontSize: 14,
                             fontWeight: FontWeight.w700,
@@ -172,14 +172,14 @@ class DiaryDetailScreen extends StatelessWidget {
       context: context,
       builder: (_) => AlertDialog(
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
-        title: Text('删除日记',
+        title: Text('删除这段时光',
             style: GoogleFonts.nunito(fontWeight: FontWeight.w800)),
-        content: Text('确定要删除这篇日记吗？删除后无法恢复。',
+        content: Text('确定要让这一天的故事消失吗？删除后将无法找回。',
             style: GoogleFonts.nunito()),
         actions: [
           TextButton(
               onPressed: () => Navigator.pop(context),
-              child: const Text('取消')),
+              child: const Text('再想想')),
           TextButton(
             onPressed: () async {
               await provider.delete(entry.id);

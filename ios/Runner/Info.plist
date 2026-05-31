@@ -3,15 +3,15 @@
 <plist version="1.0">
 <dict>
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string>心记需要访问相册，以便您为日记添加图片。</string>
+	<string>拾光需要访问相册，以便您为日记添加图片。</string>
 	<key>NSPhotoLibraryAddUsageDescription</key>
-	<string>心记需要保存图片到相册。</string>
+	<string>拾光需要保存图片到相册。</string>
 	<key>CADisableMinimumFrameDurationOnPhone</key>
 	<true/>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleDisplayName</key>
-	<string>心记</string>
+	<string>拾光</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>

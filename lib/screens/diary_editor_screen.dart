@@ -65,7 +65,7 @@ class _DiaryEditorScreenState extends State<DiaryEditorScreen> {
     final content = _contentCtrl.text.trim();
     if (content.isEmpty) {
       ScaffoldMessenger.of(context)
-          .showSnackBar(const SnackBar(content: Text('请先写点什么吧 ✍️')));
+          .showSnackBar(const SnackBar(content: Text('还没有写下任何字呢 ✍️')));
       return;
     }
     setState(() => _saving = true);
@@ -135,14 +135,14 @@ class _DiaryEditorScreenState extends State<DiaryEditorScreen> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            _SectionLabel('今天的心情'),
+            _SectionLabel('此刻的心情'),
             MoodSelector(
                 selected: _mood, onChanged: (m) => setState(() => _mood = m)),
             const SizedBox(height: 16),
-            _SectionLabel('标题'),
+            _SectionLabel('为今天起个名字'),
             _InputBox(
               controller: _titleCtrl,
-              hint: '给今天起个名字吧…',
+              hint: '比如：晴朗的午后…',
               maxLines: 1,
               style: GoogleFonts.nunito(
                   fontSize: 18,
@@ -150,10 +150,10 @@ class _DiaryEditorScreenState extends State<DiaryEditorScreen> {
                   color: DiaryTheme.textPrimary),
             ),
             const SizedBox(height: 16),
-            _SectionLabel('日记内容'),
+            _SectionLabel('想说的话'),
             _InputBox(
               controller: _contentCtrl,
-              hint: '写下今天的故事…',
+              hint: '把心里的话，慢慢写下来…',
               maxLines: 12,
               style: GoogleFonts.nunito(
                   fontSize: 15,
@@ -161,16 +161,16 @@ class _DiaryEditorScreenState extends State<DiaryEditorScreen> {
                   height: 1.7),
             ),
             const SizedBox(height: 16),
-            _SectionLabel('标签（可选）'),
+            _SectionLabel('贴个标签（可选）'),
             _InputBox(
               controller: _tagCtrl,
-              hint: '例如：开心、工作、旅行…',
+              hint: '例如：晴天、散步、小确幸…',
               maxLines: 1,
               style: GoogleFonts.nunito(
                   fontSize: 14, color: DiaryTheme.textPrimary),
             ),
             const SizedBox(height: 20),
-            _SectionLabel('添加图片'),
+            _SectionLabel('留住画面'),
             const SizedBox(height: 10),
             SizedBox(
               height: 100,
@@ -275,7 +275,7 @@ class _AddImageButton extends StatelessWidget {
             Icon(Icons.add_photo_alternate_outlined,
                 color: DiaryTheme.primary, size: 28),
             const SizedBox(height: 4),
-            Text('添加图片',
+            Text('加张照片',
                 style: GoogleFonts.nunito(
                     fontSize: 10, color: DiaryTheme.primary)),
           ],
