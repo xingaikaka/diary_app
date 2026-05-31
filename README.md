@@ -1,17 +1,41 @@
-# diary_app
+# 拾光
 
-A new Flutter project.
+> 拾起日子里的微光 —— 一款清新文艺的日系极简日记 App。
 
-## Getting Started
+「拾光」是一款用 Flutter 打造的日记应用，以米白、抹茶绿、原木色为主调，搭配文艺诗意的文案，帮你温柔地记录每一天的心情与故事。
 
-This project is a starting point for a Flutter application.
+## 功能特性
 
-A few resources to get you started if this is your first Flutter project:
+- 📖 **今日记录**：一键写下此刻的心情与故事
+- 🕊️ **时光轴**：按时间顺序回顾走过的日子
+- 📅 **日历视图**：直观查看每天的日记足迹
+- 🌿 **心情标记**：10 种心情，搭配低饱和自然色系
+- ⭐ **珍藏收藏**：收藏值得反复回味的篇章
+- 🖼️ **图片记录**：为日记添加照片，留住画面
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
+## 技术栈
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- Flutter（Material 3）
+- Provider 状态管理
+- SharedPreferences 本地存储
+- Google Fonts（Nunito）
+
+## 快速开始
+
+```bash
+flutter pub get
+flutter run
+```
+
+## 项目结构
+
+```
+lib/
+├── main.dart            # 应用入口
+├── models/              # 数据模型
+├── providers/           # 状态管理
+├── screens/             # 页面（今日 / 时光轴 / 日历 / 编辑 / 详情）
+├── services/            # 本地数据服务
+├── theme/               # 主题与配色
+└── widgets/             # 可复用组件
+```
